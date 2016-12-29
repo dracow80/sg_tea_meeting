@@ -3,7 +3,7 @@
 
 홈페이지: https://aws.amazon.com	
 제품리스트: https://github.com/dracow80/sg_tea_meeting/blob/master/about%20aws/aws_list.png	
-
+![test](aws_list.png)
 
 ---------------
 ### 데이터베이스

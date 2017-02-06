@@ -1,0 +1,44 @@
+다니아모 발표
+
+aws cli 통한 키 등록
+테이블 구조
+테이블 설계 참고사항
+인덱스
+
+테이블 생성 / 데이터 입력 샘플 코드
+
+CloudWatch 사용
+
+리전 간 복제 샘플(DynamoDB Streams)
+
+
+동일 파티션, 소트키를 사용하면 덮어쓴다
+
+
+
+이외의 확장 기능들
+•AWS CloudTrail를 사용하여 DynamoDB 작업 로깅
+•AWS Data Pipeline을 사용하여 DynamoDB 데이터 내보내기 및 가져오기
+•Amazon EMR를 사용한 테이블 쿼리 및 조인
+
+
+리전 간 복제 세팅
+아파치 메이븐 설치
+    - https://maven.apache.org/download.cgi#
+java se 설치(1.7+)
+    - http://www.oracle.com/technetwork/java/javase/overview/index.html
+git dynamodb-cross-region-library 소스 저장    
+    - https://github.com/awslabs/dynamodb-cross-region-library
+dynamodb-cross-region-library 설치
+    - mvn install
+컴파일된 dynamodb-cross-region-replication-1.1.0.jar 실행
+    - D:\Git\dynamodb-cross-region-library\target>java -jar dynamodb-cross-region-replication-1.1.0.jar --sourceEndpoint dynamodb.ap-northeast-2.amazonaws.c
+om --sourceTable AchievementState --destinationEndpoint dynamodb.ap-northeast-1.amazonaws.com --destinationTable AchievementState-tokyo
+
+java -jar dynamodb-cross-region-replication-1.1.0.jar --sourceEndpoint dynamodb.ap-northeast-1.amazonaws.com --sourceTable AchievementState-tokyo --destinationEndpoint dynamodb.ap-northeast-2.amazonaws.com --destinationTable AchievementState
+
+
+리전간 복제
+
+https://aws.amazon.com/ko/blogs/korea/dynamodb-update-triggers-streams-lambda-cross-region-replication-app/
+https://aws.amazon.com/ko/blogs/korea/how-to-cross-region-replication-in-dynamodb/
